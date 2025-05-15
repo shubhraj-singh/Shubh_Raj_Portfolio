@@ -13,10 +13,6 @@
   </div>
 
   <h3 align="center">A Modern Next.js Portfolio</h3>
-
-   <div align="center">
-     Build this project step by step with our detailed tutorial on <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a> YouTube. Join the JSM family!
-    </div>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
@@ -27,23 +23,18 @@
 4. 🤸 [Quick Start](#quick-start)
 5. 🕸️ [Code to Copy](#snippets)
 6. 🔗 [Assets](#links)
-7. 🚀 [More](#more)
 
 ## 🚨 Tutorial
 
-This repository contains the code corresponding to an in-depth tutorial available on our YouTube channel, <a href="https://www.youtube.com/@javascriptmastery/videos" target="_blank"><b>JavaScript Mastery</b></a>. 
+This repository contains the code corresponding to an in-depth tutorial <b>JavaScript Mastery</b>. 
 
-If you prefer visual learning, this is the perfect resource for you. Follow our tutorial to learn how to build projects like these step-by-step in a beginner-friendly manner!
-
-<a href="https://youtu.be/FTH6Dn3AyIQ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/1736fca5-a031-4854-8c09-bc110e3bc16d" /></a>
+If you prefer visual learning, this is the perfect resource for you.
 
 ## <a name="introduction">🤖 Introduction</a>
 
 Built with Next.js for handling the user interface, Three.js for rendering 3D elements, Framer motion for beautiful animations, and styled with TailwindCSS, this portfolio demonstrates the developer's skills in a unique manner that creates a lasting impact.
 
-If you're getting started and need assistance or face any bugs, join our active Discord community with over **34k+** members. It's a place where people help each other out.
-
-<a href="https://discord.com/invite/n6EdbFJ" target="_blank"><img src="https://github.com/sujatagunale/EasyRead/assets/151519281/618f4872-1e10-42da-8213-1d69e486d02e" /></a>
+If you're getting started and need assistance or face any bugs, join US.
 
 ## <a name="tech-stack">⚙️ Tech Stack</a>
 
@@ -60,9 +51,9 @@ If you're getting started and need assistance or face any bugs, join our active 
 
 👉 **3D Elements**:  Interactive 3D design elements, such as a GitHub-style globe and card hover effects, adding depth and engagement.
 
-👉 **Testimonials**: Dynamic testimonials area with scrolling or animated content for enhanced engagement.
+👉 **Achievements**: Dynamic achievements area with scrolling or animated content for enhanced engagement.
 
-👉 **Work Experience**: Prominent display of professional background for emphasis and credibility.
+👉 **Recent Projects**: Prominent display of professional background for emphasis and credibility.
 
 👉 **Canvas Effect**: Innovative use of HTML5 canvas to create visually striking effects in the "approaches" section.
 
@@ -660,12 +651,3 @@ style={{
 ## <a name="links">🔗 Assets</a>
 
 Assets used in the project can be found [here](https://drive.google.com/file/d/1ZmtiMilUYTp1wkiXWMFX6AUk-msE981-/view?usp=sharing)
-
-## <a name="more">🚀 More</a>
-**Advance your skills with Next.js Pro Course**
-
-Enjoyed creating this project? Dive deeper into our PRO courses for a richer learning experience. They're packed with detailed explanations, cool features, and exercises to boost your skills. Give it a go!
-
-<a href="https://www.jsmastery.pro/ultimate-next-course" target="_blank">
-<img src="https://i.ibb.co/804sPK6/Image-720.png" alt="Project Banner">
-</a>
