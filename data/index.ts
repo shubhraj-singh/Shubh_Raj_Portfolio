@@ -114,27 +114,9 @@ export const achievements = [
   },
   {
     quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+      "500+ problems solved, 50+ contests participated ranked in top 10% in recent Codeforces and CodeChef contests Specialized in algorithms: Dynamic Programming, Graph Theory, and Segment Trees",
+    name: "Codeforces",
+    title: "Expert (Rating: 1650)",
   },
 ];
 
@@ -219,24 +201,24 @@ export const certification = [
   },
   {
     id: 3,
-    title: "Freelance App Dev Project",
-    desc: "Led the dev of a mobile app for a client, from initial concept to deployment on app stores.",
-    className: "md:col-span-2", // change to md:col-span-2
-    thumbnail: "/exp3.svg",
+    title: "Issued by HackerRank - Java(Basics)",
+    desc: "Certified through a timed, hands-on coding assessment focused on real-world programming scenarios.",
+    className: "md:col-span-2",
+    thumbnail: "/cert1.svg",
   },
   {
     id: 4,
-    title: "Lead Frontend Developer",
-    desc: "Developed and maintained user-facing features using modern frontend technologies.",
+    title: "Issued by HackerRank - Java(Basics)",
+    desc: "Certified through a timed, hands-on coding assessment focused on real-world programming scenarios.",
     className: "md:col-span-2",
-    thumbnail: "/exp4.svg",
+    thumbnail: "/cert1.svg",
   },
 ];
 
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/github.svg",
     link: "https://github.com/shubhraj-singh",
 
   },
@@ -247,12 +229,12 @@ export const socialMedia = [
   },
   {
     id: 3,
-    img: "/link.svg",
-    link: "https://github.com/shubhraj-singh",
+    img: "/codeforces.svg",
+    link: "https://codeforces.com/profile/Shubh629",
   },
   {
     id: 4,
     img: "/link.svg",
-    link: "https://github.com/shubhraj-singh",
+    link: "https://www.linkedin.com/in/shubh-raj-singh-687023255/",
   },
 ];

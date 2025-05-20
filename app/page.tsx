@@ -8,7 +8,8 @@ import Footer from "@/components/Footer";
 import Clients from "@/components/Clients";
 import Approach from "@/components/Approach";
 import Experience from "@/components/Experience";
-import FloatingTags from "@/components/FloatingTags";
+import Image from "@/components/image";
+import Logo from "@/components/CompanyLogos";
 import TechSkills from "@/components/TechDashboard";
 import Certification from "@/components/Certification";
 import RecentProjects from "@/components/RecentProjects";
@@ -20,11 +21,12 @@ const Home = () => {
       <div className="max-w-7xl w-full">
         <FloatingNav navItems={navItems} />
         <Hero />
+        <Image />
         <Grid />
         <TechSkills />
         <RecentProjects />
-        <FloatingTags />
         <Clients />
+        <Logo />
         {/* <Experience /> */}
         <Certification />
         <Approach />

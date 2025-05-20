@@ -21,7 +21,7 @@ const Clients = () => {
           <InfiniteMovingCards
             items={achievements}
             direction="right"
-            speed="slow"
+            speed="normal"
           />
         </div>
 

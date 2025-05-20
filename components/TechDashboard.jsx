@@ -3,15 +3,15 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const skills = [
-    { name: "HTML", icon: "🌐", level: "Advanced" },
-    { name: "CSS", icon: "🎨", level: "Advanced" },
-    { name: "JavaScript", icon: "💛", level: "Intermediate" },
-    { name: "React", icon: "⚛️", level: "Intermediate" },
-    { name: "Node.js", icon: "🟢", level: "Intermediate" },
-    { name: "MongoDB", icon: "🍃", level: "Intermediate" },
-    { name: "Tailwind CSS", icon: "💨", level: "Advanced" },
-    { name: "Git", icon: "🔧", level: "Intermediate" },
-    { name: "Python", icon: "🐍", level: "Intermediate" },
+    { name: "HTML", icon: "html.svg", level: "Advanced" },
+    { name: "CSS", icon: "css.svg", level: "Advanced" },
+    { name: "JavaScript", icon: "javascript.svg", level: "Intermediate" },
+    { name: "React", icon: "react.svg", level: "Intermediate" },
+    { name: "Node.js", icon: "node-js.svg", level: "Intermediate" },
+    { name: "MongoDB", icon: "mongodb.svg", level: "Intermediate" },
+    { name: "Tailwind CSS", icon: "tail.svg", level: "Advanced" },
+    { name: "Git", icon: "git.svg", level: "Intermediate" },
+    { name: "Python", icon: "python.svg", level: "Intermediate" },
 ];
 
 // Container animation for grid
@@ -40,21 +40,18 @@ const item = {
 
 const TechDashboard = () => {
     return (
-        <div className="min-h-screen p-10 text-white bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="min-h-screen p-10 text-white bg-gradient-to-br via-slate-800 to-slate-900">
             {/* Animated heading */}
-            <motion.h2
-                className="text-4xl font-bold mb-12 text-center"
+            <motion.div
+                className="py-20 w-full"
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2, type: "spring" }}
             >
-                <div className="py-20 w-full">
-                <h1 className="heading">
+                <h1 className="heading text-4xl font-bold text-center">
                     Tech <span className="text-purple">I Know</span>
                 </h1>
-                </div>
-
-            </motion.h2>
+            </motion.div>
 
             {/* Skills Grid with animation */}
             <motion.div
@@ -67,14 +64,22 @@ const TechDashboard = () => {
                 {skills.map((skill, idx) => (
                     <motion.div
                         key={idx}
-                        className="bg-slate-800 p-10 rounded-2xl shadow-xl flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-300"
+                        className=" p-10 rounded-2xl shadow-xl flex flex-col items-center justify-center gap-3 cursor-pointer transition-all duration-300"
                         variants={item}
-                        whileHover={{ y: -8, scale: 1.05, boxShadow: "0px 8px 20px rgba(0, 255, 255, 0.2)" }}
+                        whileHover={{
+                            y: -8,
+                            scale: 1.05,
+                            boxShadow: "0px 8px 20px rgba(0, 255, 255, 0.2)"
+                        }}
                         whileTap={{ scale: 0.97 }}
                     >
-                        <div className="text-5xl" title={skill.name} aria-label={skill.name}>
-                            {skill.icon}
-                        </div>
+                        <img
+                            src={skill.icon}
+                            alt={skill.name}
+                            className="w-10 h-10"
+                            title={skill.name}
+                        />
+
                         <div className="text-2xl font-semibold">{skill.name}</div>
                         <div
                             className={`text-sm px-3 py-1 rounded-full text-white ${skill.level === "Advanced"
