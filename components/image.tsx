@@ -12,14 +12,13 @@ const images = [
     { src: "Achieve.jpg", text: "Achieve" },
 ];
 
-const ImageGallery: React.FC = () => {
+const ImageGallery = () => {
     return (
         <div className="h-[50vh] md:h-[30rem] flex flex-col items-center justify-center relative overflow-hidden">
             <InfiniteMovingCards
                 cards={images}
-                direction="right"
+                direction="left"
                 speed="normal"
-                pauseOnHover={true}
             />
 
         </div>

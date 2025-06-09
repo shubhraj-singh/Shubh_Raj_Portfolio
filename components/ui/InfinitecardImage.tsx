@@ -1,54 +1,70 @@
 import React, { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils"; // Assuming you have this utility or replace with classnames or string join
+import { cn } from "@/lib/utils";
 
-interface Card {
-    src: string;
-    text: string;
-}
-
-interface InfiniteMovingCardsProps {
-    cards: Card[];
-    direction?: "left" | "right";
-    speed?: "fast" | "normal" | "slow";
-    pauseOnHover?: boolean;
-    className?: string;
-}
-
-export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
+export const InfiniteMovingCards = ({
     cards,
     direction = "left",
     speed = "fast",
-    pauseOnHover = true,
     className,
+}: {
+    cards: {
+        src: string;
+        text: string;
+    }[];
+    direction?: "left" | "right";
+    speed?: "fast" | "normal" | "slow";
+    className?: string;
 }) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const scrollerRef = useRef<HTMLDivElement>(null);
-    const [start, setStart] = useState(false);
-
-    // Duplicate cards for seamless scroll
     useEffect(() => {
-        if (!scrollerRef.current) return;
+        addAnimation();
+    }, []);
+    const [start, setStart] = useState(false);
+    function addAnimation() {
+        if (containerRef.current && scrollerRef.current) {
+            const scrollerContent = Array.from(scrollerRef.current.children);
 
-        const children = Array.from(scrollerRef.current.children);
-        children.forEach((child) => {
-            const clone = child.cloneNode(true);
-            scrollerRef.current?.appendChild(clone);
-        });
+            scrollerContent.forEach((item) => {
+                const duplicatedItem = item.cloneNode(true);
+                if (scrollerRef.current) {
+                    scrollerRef.current.appendChild(duplicatedItem);
+                }
+            });
 
-        // Set CSS vars for direction and speed
-        if (containerRef.current) {
-            containerRef.current.style.setProperty(
-                "--animation-direction",
-                direction === "right" ? "normal" : "reverse"
-            );
-            let duration = "20s";
-            if (speed === "normal") duration = "40s";
-            else if (speed === "slow") duration = "80s";
-            containerRef.current.style.setProperty("--animation-duration", duration);
+            getDirection();
+            getSpeed();
+            setStart(true);
         }
+    }
+    const getDirection = () => {
+        if (containerRef.current) {
+            if (direction === "left") {
+                containerRef.current.style.setProperty(
+                    "--animation-direction",
+                    "forwards"
+                );
+            } else {
+                containerRef.current.style.setProperty(
+                    "--animation-direction",
+                    "reverse"
+                );
+            }
+        }
+    };
 
-        setStart(true);
-    }, [cards, direction, speed]);
+    // Set CSS vars for direction and speed
+    const getSpeed = () => {
+        if (containerRef.current) {
+            if (speed === "fast") {
+                containerRef.current.style.setProperty("--animation-duration", "20s");
+            } else if (speed === "normal") {
+                containerRef.current.style.setProperty("--animation-duration", "40s");
+            } else {
+                containerRef.current.style.setProperty("--animation-duration", "80s");
+            }
+        }
+    };
 
     return (
         <>
@@ -101,7 +117,7 @@ export const InfiniteMovingCards: React.FC<InfiniteMovingCardsProps> = ({
                                     {card.text}
                                 </span>
                             </div>
-                        </div>                      
+                        </div>
                     ))}
                 </div>
             </div>
